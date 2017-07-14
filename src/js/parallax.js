@@ -2,14 +2,19 @@ class Parallax {
   constructor(selector) {
     this.elem = document.querySelector(selector);
     this.bkg = this.elem.querySelector('.bkg');
+    this.init();
     this.registerListeners();
     this.renderParallax();
+  }
+
+  init() {
+    $(this.elem).addClass('loaded');
   }
 
   registerListeners() {
     window.addEventListener("scroll", () => this.renderParallax());
     window.addEventListener("resize", () => this.renderParallax());
-    
+
   }
 
   renderParallax() {

@@ -1,0 +1,28 @@
+.main-side-nav {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  right: -100px;
+  z-index: 1;
+  background: #d6d8d7;
+  transition: all .4s;
+
+  ul {
+    list-style: none;
+    padding: 0px;
+
+    li {
+      a {
+        padding: 10px 30px;
+        color: #e9d1a4;
+        display: block;
+      }
+    }
+  }
+
+  .main-side-nav-opened & {
+    right: 0px;
+    background: #ebedec;
+  }
+}

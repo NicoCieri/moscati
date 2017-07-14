@@ -1,0 +1,16 @@
+body {
+  overflow-x: hidden;
+  background: #ebedec;
+}
+
+.page {
+  position: relative;
+  background: #ebedec;
+  right: 0px;
+  z-index: 2;
+  transition: all .4s;
+
+  .main-side-nav-opened & {
+    right: 250px;
+  }
+}
