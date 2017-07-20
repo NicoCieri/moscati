@@ -32,7 +32,10 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
+    "file-loader": "^0.11.2",
     "flickity": "^2.0.9",
-    "flickity-imagesloaded": "^2.0.0"
+    "flickity-imagesloaded": "^2.0.0",
+    "image-webpack-loader": "^3.3.1",
+    "url-loader": "^0.5.9"
   }
 }

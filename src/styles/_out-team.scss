@@ -1,11 +1,36 @@
-.team {
+.crew {
+  min-height: 650px;
   text-align: center;
   padding: 20px 20px;
+
+  h2 {
+    color: #FFF;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 198px;
+      height: 187px;
+      display: block;
+      position: absolute;
+      bottom: -300%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      background: url('../img/crew-title-bkg@2x.gif') center no-repeat;
+      background-size: contain;
+      opacity: .3;
+    }
+  }
+
+  .intro {
+    color: #FFF;
+  }
+
 }
 
-.thumbnail-team {
+.thumbnail-crew {
   .thumbnail-item {
-    height: 300px;
+    height: 360px;
     padding: 20px 20px;
     background: #ebedec;
     text-align: center;
@@ -28,10 +53,16 @@
 
     p {
       font-size: 12px;
+      text-align: justify;
       position: relative;
       opacity: 0;
       transform: scale(.8);
       transition: all .3s ease-out .0s;
+    }
+
+    .author {
+      color: #ce9525;
+      text-align: right;
     }
 
     .btn-more {

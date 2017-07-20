@@ -1,7 +1,7 @@
 import Flickity from 'flickity-imagesloaded';
 
 class Carousel {
-  constructor(selector, options={}) {
+  constructor(selector, settings={}) {
     this.elem = $(selector);
     this.fullpageBtn = this.elem.find('.full-screen-btn');
     this.carousel = new Flickity(selector, {
@@ -9,7 +9,7 @@ class Carousel {
       cellSelector: '.carousel-cell',
       imagesLoaded: true,
       cellAlign: 'center',
-      ...options
+      ...settings
     });
     this.registerListeners();
   }

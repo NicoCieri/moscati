@@ -19,7 +19,7 @@ class Parallax {
 
   renderParallax() {
     window.requestAnimationFrame(() => {
-      let position = document.body.getBoundingClientRect().top * .5 * (-1);
+      let position = document.body.getBoundingClientRect().top * .3 * (-1);
       this.bkg.style.transform = "translate3d(-50%, " + position.toFixed(0) + "px, 0px)";
     });
   }

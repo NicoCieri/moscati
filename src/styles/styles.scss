@@ -1,7 +1,9 @@
-@import './generic.scss';
-@import './main-sidenav.scss';
-@import './carousels.scss';
-@import './parallax.scss';
+@import './_variables.scss';
+@import './_mixins.scss';
+@import './_generic.scss';
+@import './_main-sidenav.scss';
+@import './_carousels.scss';
+@import './_parallax.scss';
 
 // Home
 @import './out-team.scss';
