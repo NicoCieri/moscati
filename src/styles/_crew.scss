@@ -1,0 +1,146 @@
+.crew {
+  min-height: 650px;
+  text-align: center;
+  padding: 50px 20px;
+  background: $color-1;
+
+  h2 {
+    margin-bottom: 22px;
+    font: 50px/60px $cormorant;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: ls(5, 50px);
+    color: $color-white;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 198px;
+      height: 187px;
+      display: block;
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      @include transform(translate(-50%, 0));
+      background: url('../img/crew-title-bkg@2x.gif') center no-repeat;
+      background-size: contain;
+      opacity: .3;
+    }
+  }
+
+  .intro {
+    margin-bottom: 45px;
+    font: 22.5px/26px $cormorant;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: ls(25, 22.5px);
+    color: $color-white;
+  }
+
+}
+
+.thumbnail-crew {
+  .thumbnail-item {
+    height: 360px;
+    padding: 20px 20px;
+    background: #ebedec;
+    text-align: center;
+    overflow: hidden;
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 100%;
+      @include transition(all .2s ease-out);
+      will-change: width, height;
+    }
+
+    h3 {
+      font: 27.5px/27px $cormorant;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $color-11;
+      @include transition(all .2s ease-out);
+      will-change: font-size;
+    }
+
+    h4 {
+      font: 18.5px/18px $maven;
+      text-transform: uppercase;
+      color: $color-11;
+      @include transition(all .2s ease-out);
+      will-change: font-size;
+    }
+
+    p {
+      font: 15px/16px $cormorant;
+      text-align: justify;
+      letter-spacing: ls(2.5, 15px);
+      color: $color-3;
+      position: relative;
+      opacity: 0;
+      @include transform(scale(.8));
+      @include transition(all .2s ease-out .0s);
+      will-change: opacity, top, transform;
+    }
+
+    .author {
+      color: #ce9525;
+      text-align: right;
+    }
+
+    .btn-more {
+      width: 50px;
+      height: 50px;
+      display: block;
+      margin: 0 auto 10px;
+      background: #c2a102;
+      color: $color-white;
+      text-align: center;
+      line-height: 45px;
+      text-decoration: none;
+      overflow: hidden;
+      position: relative;
+      @include transition(all .2s ease-out);
+
+      &:before {
+        content: '+';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+      }
+    }
+
+    &.opened {
+      .avatar {
+        width: 63px;
+        height: 63px;
+      }
+
+      h3 {
+        font: 21px/24px $cormorant;
+      }
+
+      h4 {
+        font: 12px/12px $maven;
+      }
+
+      p {
+        opacity: 1;
+        top: 0px;
+        @include transform(scale(1));
+      }
+
+      .btn-more {
+        width: 20px;
+        height: 20px;
+
+        &:before {
+          content: '-';
+        }
+      }
+    }
+  }
+}

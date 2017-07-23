@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
   background: #ebedec;
+  font-family: $cormorant;
 }
 
 .page {
@@ -11,6 +12,117 @@ body {
   transition: all .4s;
 
   .main-side-nav-opened & {
-    right: 250px;
+    right: $sidenav-width-desktop;
   }
+}
+
+.header {
+  width: 100%;
+  padding: 16px 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  overflow: hidden;
+
+  .hamburguer-button {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    @include gradient($color-1, #e2b67a);
+    @include transition(all .3s);
+
+    .close-btn {
+      font-size: 24px;
+      color: $color-1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transition(all .3s);
+      @include transform(translate(-50%, -50%) scale(0));
+    }
+
+    .hamburguer-group {
+      width: 18px;
+      height: 14px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transition(opacity .2s);
+      @include transform(translate(-50%, -50%));
+      will-change: transform;
+      animation: rotate 4s infinite;
+    }
+
+    .hamburguer-item {
+      width: 18px;
+      height: 3px;
+      background: $color-white;
+      border-radius: 10px;
+      display: block;
+      position: absolute;
+      left: 0px;
+      will-change: top, transform;
+
+
+      &:nth-child(1) {
+        top: 0px;
+        // animation: appear-from-top 4s 1.3s infinite ;
+      }
+
+      &:nth-child(2) {
+        top: 6px;
+        // animation: appear-from-top 4s 1.6s infinite ;
+      }
+
+      &:nth-child(3) {
+        top: 12px;
+        // animation: appear-from-top 4s 1.9s infinite ;
+      }
+    }
+
+    .main-side-nav-opened & {
+      background: transparent;
+      border: 1px solid $color-1;
+
+      .hamburguer-group {
+        opacity: 0;
+      }
+
+      .close-btn {
+        @include transform(translate(-50%, -50%) scale(1));
+      }
+    }
+
+  }
+}
+
+
+@-webkit-keyframes rotate {
+  0%  { @include transform(translate(-50%, -50%) rotate(0)); }
+  25% { @include transform(translate(-50%, -50%) rotate(720deg)); }
+  100%{ @include transform(translate(-50%, -50%) rotate(720deg)); }
+}
+
+@keyframes rotate {
+  0%  { @include transform(translate(-50%, -50%) rotate(0)); }
+  25% { @include transform(translate(-50%, -50%) rotate(720deg)); }
+  100%{ @include transform(translate(-50%, -50%) rotate(720deg)); }
+}
+
+@-webkit-keyframes appear-from-top {
+  0%  { @include transform(translate(0%, 0%)); }
+  25% { @include transform(translate(0%, 0%)); }
+  50% { @include transform(translate(0%, 0%)); }
+  75% { @include transform(translate(0%, 50px)); }
+  100%{ @include transform(translate(0%, 0%)); }
+}
+
+@keyframes appear-from-top {
+  0%  { @include transform(translate(0%, 0%)); }
+  25% { @include transform(translate(0%, 0%)); }
+  50% { @include transform(translate(0%, 0%)); }
+  75% { @include transform(translate(0%, 50px)); }
+  100%{ @include transform(translate(0%, 0%)); }
 }

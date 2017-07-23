@@ -1,6 +1,6 @@
 /* MIXINS AND FUNCTIONS */
-@function calculate-ls($val, $font-size) {
-  $vw-context: ( $val * $font-size / 1000 ) * 1px;
+@function ls($val, $font-size) {
+  $vw-context: ( $val * $font-size / 1000 );
   @return $vw-context;
 }
 
@@ -257,79 +257,6 @@
   user-select: none;
 }
 
-@mixin btn {
-  @include font(12px, 16px, $DINPro-Medium);
-  letter-spacing: $DIN-letter-spacing;
-  background: $color-white;
-  border: 1px solid $color-black;
-  text-transform: uppercase;
-  text-align: center;
-  color: $color-black;
-  cursor: pointer;
-
-  a {
-    color: $color-black;
-  }
-}
-
-@mixin btn-large {
-  @include btn;
-  padding: 10px 45px;
-}
-
-@mixin btn-medium {
-  @include btn;
-  padding: 10px 25px;
-}
-
-@mixin btn-small {
-  @include btn;
-  padding: 10px;
-}
-
-@mixin btn-fluid {
-  @include vw(font-size, 12px, $desktop);
-  @include vw(line-height, 16px, $desktop);
-  @include vw(letter-spacing, 1px, $desktop);
-  font-family: $DINPro-Medium;
-  background: $color-white;
-  border: 1px solid $color-black;
-  text-transform: uppercase;
-  text-align: center;
-  color: $color-black;
-  cursor: pointer;
-
-  a {
-    color: $color-black;
-  }
-}
-
-@mixin mobile-btn-fluid {
-  @include vw(font-size, 12px, $mobile);
-  @include vw(line-height, 16px, $mobile);
-  @include vw(letter-spacing, 1px, $mobile);
-
-  a {
-    color: $color-black;
-  }
-}
-
-@mixin btn-fluid-large {
-  @include btn-fluid;
-  @include vw(padding-top, 8px, $desktop);
-  @include vw(padding-bottom, 8px, $desktop);
-  @include vw(padding-left, 45px, $desktop);
-  @include vw(padding-right, 45px, $desktop);
-}
-
-@mixin mobile-btn-fluid-large {
-  @include mobile-btn-fluid;
-  @include vw(padding-top, 10px, $mobile);
-  @include vw(padding-bottom, 10px, $mobile);
-  @include vw(padding-left, 45px, $mobile);
-  @include vw(padding-right, 45px, $mobile);
-}
-
 @mixin drop-shadow {
   -webkit-box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.3);
   -moz-box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.3);
@@ -340,4 +267,12 @@
   box-shadow: 0 4px 4px -2px rgba(0,0,0,0.3);
   -moz-box-shadow: 0 4px 4px -2px rgba(0,0,0,0.3);
   -webkit-box-shadow: 0 4px 4px -2px rgba(0,0,0,0.3);
+}
+
+@mixin gradient($color1, $color2) {
+  background: $color1; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($color1, $color2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($color1, $color2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($color1, $color2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($color1, $color2); /* Standard syntax */
 }

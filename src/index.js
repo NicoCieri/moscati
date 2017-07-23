@@ -5,7 +5,7 @@ import Parallax from './js/parallax.js';
 import TogglerClass from './js/toggler-class.js';
 import AnimatedAnchor from './js/animated-anchor.js';
 
-new Carousel('.carousel');
+new Carousel('.main-carousel');
 new Parallax('.parallax');
 
 $('.thumbnail-item').each((index, item) => {
@@ -26,4 +26,10 @@ new TogglerClass({
 const links = document.querySelectorAll('.animated-anchor');
 new AnimatedAnchor(links, {
   speed: 700
+});
+
+new Carousel('#testimony-carousel', {
+  groupCells: true,
+  wrapAround: false,
+  pageDots: false
 });

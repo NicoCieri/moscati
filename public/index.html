@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Webpack 2.0 from scratch!</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant:300,400,400i,500i,600,600i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" rel="stylesheet">
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,14 +21,12 @@
 
   <div class="main-side-nav">
     <nav>
-      <span class="nav-title">menú</span>
       <ul>
-        <li><a href="#">nosotros</a></li>
+        <li><a href="#" class="active">nosotras</a></li>
         <li><a href="#">servicio</a></li>
         <li><a href="#">eventos</a></li>
         <li><a href="#">ceremonias simbólicas</a></li>
         <li><a href="#">redes sociales</a></li>
-        <li><a href="#">lala</a></li>
         <li><a href="#">prensa</a></li>
         <li><a href="#">contactanos</a></li>
       </ul>
@@ -33,24 +35,36 @@
 
   <div class="page">
 
-    <div class="container">
-      <div class="header">
-        <div class="fixed-header">
+    <div class="header">
+      <div class="row">
+        <div class="col-sm-3 col-sm-offset-1">
           <a href="" class="logo pull-left">
-            <img src="https://placehold.it/300x50" alt="">
+            <img src="img/silvia-moscati-logo@2x.png" alt="Silvia Moscati" class="img-responsive">
           </a>
+        </div>
+        <div class="col-sm-1 col-sm-offset-6">
           <a href="" id="main-nav-toggle-btn" class="hamburguer-button pull-right">
-            <img src="https://placehold.it/50x50" alt="">
+            <span class="hamburguer-group">
+              <span class="hamburguer-item"></span>
+              <span class="hamburguer-item"></span>
+              <span class="hamburguer-item"></span>
+            </span>
+            <span class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></span>
           </a>
         </div>
       </div>
     </div>
 
-    <section class="carousel">
-      <div class="carousel-cell"><img src="https://placehold.it/1400x500" class="img-responsive"></div>
-      <div class="carousel-cell"><img src="https://placehold.it/1400x500" class="img-responsive"></div>
-      <div class="carousel-cell"><img src="https://placehold.it/1400x500" class="img-responsive"></div>
-      <a href="#" class="full-screen-btn">Fullscreen</a>
+    <section class="carousel main-carousel">
+      <div class="carousel-cell">
+        <img src="img/carousel-01@2x.jpg" class="img-responsive">
+        <div class="content y-bottom">
+          <h3>EN TODOS LOS DETALLES JUNTO A VOS</h3>
+        </div>
+      </div>
+      <div class="carousel-cell"><img src="https://placehold.it/1140x650" class="img-responsive"></div>
+      <div class="carousel-cell"><img src="https://placehold.it/1140x650" class="img-responsive"></div>
+      <!-- <a href="#" class="full-screen-btn">Fullscreen</a> -->
       <a href="#nuestro-equipo" class="anchor animated-anchor"></a>
     </section>
 
@@ -59,7 +73,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-3">
-            <h2>Nuestro equipo</h2>
+            <h2>nuestro equipo</h2>
             <p class="intro">En Silvia Moscati Event Planners te acompañamos en la organización de tu evento hasta el último detalle para que tu festejo sea memorable, personal y único.</p>
           </div>
         </div>
@@ -85,12 +99,57 @@
           </div> -->
           <div class="col-sm-4 col-sm-offset-8">
             <div class="thumbnail-item">
-              <img src="https://placehold.it/100x100" alt="">
+              <img src="img/silvia-moscati-avatar@2x.jpg" alt="" class="avatar">
               <h3>Silvia Moscati</h3>
               <h4>directora</h4>
               <a href="#" class="btn-more toggle-description"></a>
               <p>Detallista e innovadora, me comprometo con cada uno de mis clientes, donde el trato personalizado me ayuda a focalizarme en los pequeños detalles que marcan la diferencia. Convertir los sueños en realidad no es una tarea fácil, pero juntos podemos lograr que tu evento sea único y memorable. </p>
               <p class="author">-Silvia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonios">
+      <h2>TESTIMONIOS</h2>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <div class="carousel testimony-carousel" id="testimony-carousel">
+            <div class="carousel-cell col-sm-4 col-xs-12">
+              <img src="https://placehold.it/67x67" alt="" class="avatar">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+              <p class="author">-Aenean massa.</p>
+            </div>
+            <div class="carousel-cell col-sm-4 col-xs-12">
+              <img src="https://placehold.it/67x67" alt="" class="avatar">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+              <p class="author">-Aenean massa.</p>
+            </div>
+            <div class="carousel-cell col-sm-4 col-xs-12">
+              <img src="https://placehold.it/67x67" alt="" class="avatar">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+              <p class="author">-Aenean massa.</p>
+            </div>
+            <div class="carousel-cell col-sm-4 col-xs-12">
+              <img src="https://placehold.it/67x67" alt="" class="avatar">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+              <p class="author">-Aenean massa.</p>
+            </div>
+            <div class="carousel-cell col-sm-4 col-xs-12">
+              <img src="https://placehold.it/67x67" alt="" class="avatar">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+              <p class="author">-Aenean massa.</p>
+            </div>
+            <div class="carousel-cell col-sm-4 col-xs-12">
+              <img src="https://placehold.it/67x67" alt="" class="avatar">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+              <p class="author">-Aenean massa.</p>
+            </div>
+            <div class="carousel-cell col-sm-4 col-xs-12">
+              <img src="https://placehold.it/67x67" alt="" class="avatar">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+              <p class="author">-Aenean massa.</p>
             </div>
           </div>
         </div>
@@ -106,6 +165,8 @@
   crossorigin="anonymous"></script>
   <!-- Bootstrap -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/7dd7d1c763.js"></script>
   <!-- App -->
   <script src="output.js"></script> <!-- webpack javascript output -->
 

@@ -9,6 +9,7 @@ class Carousel {
       cellSelector: '.carousel-cell',
       imagesLoaded: true,
       cellAlign: 'center',
+      wrapAround: true,
       ...settings
     });
     this.registerListeners();
