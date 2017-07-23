@@ -6,7 +6,10 @@ import TogglerClass from './js/toggler-class.js';
 import AnimatedAnchor from './js/animated-anchor.js';
 
 new Carousel('.main-carousel');
-new Parallax('.parallax');
+
+$('.parallax').each((index, item) => {
+  new Parallax(item)
+})
 
 $('.thumbnail-item').each((index, item) => {
   const $item = $(item);

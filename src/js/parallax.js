@@ -1,6 +1,6 @@
 class Parallax {
-  constructor(selector) {
-    this.elem = document.querySelector(selector);
+  constructor(elem) {
+    this.elem = elem;
     this.bkg = this.elem.querySelector('.bkg');
     this.init();
     this.registerListeners();

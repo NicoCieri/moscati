@@ -1,0 +1,80 @@
+.services {
+  h2 {
+    margin-bottom: 22px;
+    font: 50px/60px $cormorant;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: ls(5, 50px);
+    color: $color-1;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 198px;
+      height: 187px;
+      display: block;
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      @include transform(translate(-50%, 0));
+      background: url('../img/crew-title-bkg@2x.gif') center no-repeat;
+      background-size: contain;
+      opacity: .3;
+    }
+  }
+
+  .intro {
+    margin-bottom: 45px;
+    font: 22.5px/26px $cormorant;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: ls(25, 22.5px);
+    color: $color-1;
+  }
+
+  .item {
+    padding: 36px 0px;
+    color: $color-4;
+
+    h4 {
+      margin: 74px 0px 5px;
+      font: 23px/26px $cormorant;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: ls(50, 23px);
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 16px;
+        height: 2px;
+        display: block;
+        background: $color-2;
+        position: absolute;
+        top: -11px;
+        left: 0px;
+      }
+    }
+
+    p {
+      font: 15px/18px $maven;
+      text-align: justify;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .services {
+    padding: 20px 20px;
+
+    .item {
+      padding: 20px 0px;
+
+      h4 {
+        margin: 10px 0px 5px;
+      }
+    }
+  }
+}

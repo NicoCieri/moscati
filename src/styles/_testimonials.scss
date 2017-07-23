@@ -103,10 +103,15 @@
 }
 
 @media screen and (max-width: 768px) {
+  .testimonials {
+    padding: 20px 10px;
+  }
   .testimony-carousel {
+    padding: 40px 0px 0px;
     .flickity-prev-next-button {
       left: auto;
       right: 0px;
+      top: 20px;
 
       &.previous {
         margin-right: 34px;
@@ -115,6 +120,10 @@
       &.next {
         margin-left: 0px;
       }
+    }
+
+    .carousel-cell {
+      padding: 10px 15px;
     }
   }
 }
