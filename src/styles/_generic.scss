@@ -16,6 +16,37 @@ body {
   }
 }
 
+.btn {
+  min-width: 180px;
+  font: 18px/42px $maven;
+  letter-spacing: ls(50, 18px);
+  color: $color-white;
+  border: none;
+  border-radius: 20px;
+  padding: 0px 12px;
+
+  &.btn-default {
+    &,
+    &:active,
+    &:focus,
+    &:hover {
+      color: $color-white;
+      background: $color-2;
+    }
+
+  }
+
+  &.btn-primary {
+    &,
+    &:active,
+    &:focus,
+    &:hover {
+      color: $color-white;
+      background: $color-1;
+    }
+  }
+}
+
 .header {
   width: 100%;
   padding: 16px 0px;
@@ -96,6 +127,17 @@ body {
     }
 
   }
+}
+
+%small-line {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background: $color-2;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  @include transform(translate(-50%, 0));
 }
 
 

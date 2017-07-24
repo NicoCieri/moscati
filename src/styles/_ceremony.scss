@@ -1,0 +1,76 @@
+.ceremony {
+  padding: 100px 0px 110px;
+  color: $color-white;
+  background: #bd7124;
+  text-align: center;
+  position: relative;
+
+  &:before {
+    @extend %small-line;
+    top: 72px;
+    background: $color-white;
+    z-index: 1;
+  }
+
+  h2 {
+    font: 50px/50px $cormorant;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: ls(5, 50px);
+    position: relative;
+    margin-top: 56px;
+    margin-bottom: -1px;
+  }
+
+  h3 {
+    font: 24px/24px $maven;
+    letter-spacing: ls(25, 24px);
+    margin-top: 0px;
+    margin-bottom: 134px;
+  }
+
+  .intro {
+    width: 100%;
+    padding: 50px 0px 55px;
+    position: relative;
+    background: $color-white-transparent;
+
+    &:before {
+      @extend %small-line;
+      top: 30px;
+    }
+
+    p {
+      font: 18px/22px $maven;
+      letter-spacing: ls(25, 18px);
+    }
+
+    .link {
+      width: 84px;
+      height: 84px;
+      display: block;
+      text-decoration: none;
+      border: 1px solid $color-1;
+      background: #e3b67a;
+      border-radius: 100%;
+      box-shadow:
+        0px 4.5px 3.5px rgba(177, 99, 31, 0.75),
+        0px 6px 10px rgba(128, 62, 18, 0.33) inset;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+
+      .link-text {
+        font: 18px/15px $maven;
+        font-weight: 500;
+        color: $color-white;
+        text-decoration: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+      }
+    }
+  }
+}
