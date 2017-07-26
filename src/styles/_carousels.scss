@@ -41,6 +41,50 @@
       color: $color-1;
     }
   }
+
+  .flickity-prev-next-button {
+    width: 34px;
+    height: 34px;
+    border-radius: 0;
+    position: absolute;
+    left: 100%;
+    top: -32px;
+    background-color: $color-2;
+    @include transition(all .2s);
+
+    &:before {
+      content: '<';
+      font: 17px/34px $maven;
+      color: $color-white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+    }
+
+    &:disabled {
+      opacity: 1;
+      background-color: $color-5;
+
+      &:before { color: $color-3; }
+    }
+
+    &.previous {
+
+    }
+
+    &.next {
+      margin-left: 34px;
+
+      &:before {
+        content: '>';
+      }
+    }
+
+    svg {
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -50,6 +94,20 @@
         h3 {
           font: 20px/22px $cormorant;
         }
+      }
+    }
+
+    .flickity-prev-next-button {
+      left: auto;
+      right: 0px;
+      top: 20px;
+
+      &.previous {
+        margin-right: 34px;
+      }
+
+      &.next {
+        margin-left: 0px;
       }
     }
   }

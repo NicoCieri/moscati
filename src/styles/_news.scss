@@ -1,0 +1,34 @@
+.news {
+  padding: 72px 0px 27px;
+
+  h3 {
+    font: 30px/27px $maven;
+    font-weight: 600;
+    letter-spacing: ls(25, 30px);
+    color: $color-3;
+  }
+
+  p {
+    font: 15px/18px $maven;
+    color: $color-4;
+  }
+}
+
+.news-carousel {
+  overflow: visible;
+  padding-bottom: 40px;
+
+  .flickity-prev-next-button {
+    left: auto;
+    right: 15px;
+    top: 100%;
+
+    &.previous {
+      margin-right: 34px;
+    }
+
+    &.next {
+      // margin-left: 0px;
+    }
+  }
+}

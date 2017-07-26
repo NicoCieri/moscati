@@ -36,3 +36,10 @@ new Carousel('#testimony-carousel', {
   wrapAround: false,
   pageDots: false
 });
+
+new Carousel('#news-carousel', {
+  groupCells: true,
+  wrapAround: false,
+  pageDots: false,
+  draggable: false
+});
