@@ -1,0 +1,15 @@
+.contact {
+  padding: 110px 0px 118px;
+  
+  h2 {
+    font: 24px/26px $maven;
+    letter-spacing: ls(25, 24px);
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .form-wrapper {
+    background: $color-2-transparent;
+  }
+}
