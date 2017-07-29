@@ -2,6 +2,7 @@ import './styles/styles.scss';
 import $ from 'jquery';
 import Carousel from './js/carousel.js';
 import Parallax from './js/parallax.js';
+import Appear from './js/appear.js';
 import TogglerClass from './js/toggler-class.js';
 import AnimatedAnchor from './js/animated-anchor.js';
 
@@ -43,3 +44,7 @@ new Carousel('#news-carousel', {
   pageDots: false,
   draggable: false
 });
+
+$('.appear-on-scroll').each((index, item) => {
+  new Appear(item)
+})
