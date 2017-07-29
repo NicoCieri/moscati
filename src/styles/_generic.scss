@@ -47,6 +47,13 @@ body {
   }
 }
 
+@media (min-width: 992px) {
+  .container {
+    width: 1170px;
+    max-width: 100%;
+  }
+}
+
 .row.no-padding {
   [class*="col-"] {
     padding-left: 0 !important;
@@ -136,6 +143,75 @@ body {
   }
 }
 
+.footer {
+  padding: 58px 0px 4px;
+  text-align: center;
+  color: $color-white;
+  background-color: #303030;
+  // background: url('../img/footer-bkg@2x.jpg') center cover;
+
+  .call-us {
+    p {
+      font: 20px/22px $maven;
+      letter-spacing: ls(25, 20px);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+
+      &.tel {
+        font: 47.5px/36px $cormorant;
+        font-weight: 600;
+        font-style: italic;
+        letter-spacing: ls(5, 47.5px);
+        color: $color-2;
+        margin-bottom: 46px;
+      }
+    }
+  }
+
+  .social-media {
+    padding-bottom: 40px;
+
+    p {
+      font: 15px/18px $maven;
+      margin-bottom: 8px;
+    }
+
+    .social-media-btn {
+      $size: 44px;
+      width: $size;
+      height: $size;
+      display: block;
+      margin: 0 auto;
+      font-size: 20px;
+      color: $color-white;
+      border: 2px solid $color-white;
+      border-radius: 100%;
+      position: relative;
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+      }
+    }
+  }
+
+  .disclaimer {
+    p {
+      font: 9px/11.5px $maven;
+      letter-spacing: ls(100, 9px);
+      color: $color-10;
+
+      a {
+        color: $color-10;
+        text-decoration: none;
+      }
+    }
+  }
+
+}
+
 %small-line {
   content: '';
   width: 30px;
@@ -149,8 +225,9 @@ body {
 
 .appear-on-scroll {
   opacity: 0;
-  @include transition(all .5s);
-  @include transform(translateY(50px));
+  @include transition(all .6s);
+  @include transform(translateY(70px));
+  will-change: opacity, transform;
 
   &.show {
     opacity: 1;
