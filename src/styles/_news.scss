@@ -1,5 +1,6 @@
 .news {
   padding: 72px 0px 27px;
+  background: white;
 
   h3 {
     font: 30px/27px $maven;
@@ -30,5 +31,11 @@
     &.next {
       // margin-left: 0px;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news {
+    padding-top: 40px;
   }
 }

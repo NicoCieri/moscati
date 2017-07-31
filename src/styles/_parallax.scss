@@ -22,12 +22,26 @@
     left: 50%;
     z-index: 0;
     opacity: 0;
-    transition: opacity .2s;
+    @include transition(opacity .2s);
+    @include transform(translate(-50%, -50%));
+    will-change: opacity, transform;
   }
 
   &.loaded {
     .bkg {
       opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .parallax {
+    .bkg {
+      width: auto;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
     }
   }
 }

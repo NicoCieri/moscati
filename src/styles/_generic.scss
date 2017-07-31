@@ -157,7 +157,8 @@ body {
   text-align: center;
   color: $color-white;
   background-color: #303030;
-  // background: url('../img/footer-bkg@2x.jpg') center cover;
+  background: url('../img/footer-bkg@2x.jpg') center no-repeat;
+  background-size: cover;
 
   .call-us {
     p {
@@ -239,17 +240,38 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+
+  .page {
+    .main-side-nav-opened & {
+      right: $sidenav-width-mobile;
+    }
+  }
+
+  .header {
+    .hamburguer-button {
+      margin-right: 10px;
+    }
+  }
+
+  .footer {
+    padding: 40px 15px 10px;
+  }
+
+
+}
+
 
 @-webkit-keyframes rotate {
-  0%  { @include transform(translate(-50%, -50%) rotate(0)); }
-  25% { @include transform(translate(-50%, -50%) rotate(720deg)); }
-  100%{ @include transform(translate(-50%, -50%) rotate(720deg)); }
+  0%  { @include transform(translate(-50%, -50%) rotate(0)); transform-origin: center center;}
+  25% { @include transform(translate(-50%, -50%) rotate(720deg)); transform-origin: center center;}
+  100%{ @include transform(translate(-50%, -50%) rotate(720deg)); transform-origin: center center;}
 }
 
 @keyframes rotate {
-  0%  { @include transform(translate(-50%, -50%) rotate(0)); }
-  25% { @include transform(translate(-50%, -50%) rotate(720deg)); }
-  100%{ @include transform(translate(-50%, -50%) rotate(720deg)); }
+  0%  { @include transform(translate(-50%, -50%) rotate(0)); transform-origin: center center;}
+  25% { @include transform(translate(-50%, -50%) rotate(720deg)); transform-origin: center center;}
+  100%{ @include transform(translate(-50%, -50%) rotate(720deg)); transform-origin: center center;}
 }
 
 @-webkit-keyframes appear-from-top {

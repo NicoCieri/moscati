@@ -1,10 +1,13 @@
 import './styles/styles.scss';
 import $ from 'jquery';
-import Carousel from './js/carousel.js';
-import Parallax from './js/parallax.js';
-import Appear from './js/appear.js';
-import TogglerClass from './js/toggler-class.js';
-import AnimatedAnchor from './js/animated-anchor.js';
+import Carousel from './js/carousel';
+import Parallax from './js/parallax';
+import Appear from './js/appear';
+import TogglerClass from './js/toggler-class';
+import AnimatedAnchor from './js/animated-anchor';
+import MainNav from './js/main-nav';
+
+new MainNav();
 
 new Carousel('.main-carousel', {
   prevNextButtons: false,
@@ -24,11 +27,11 @@ $('.thumbnail-item').each((index, item) => {
   });
 });
 
-new TogglerClass({
-  receptor: $('body'),
-  btn: $('#main-nav-toggle-btn'),
-  className: 'main-side-nav-opened'
-});
+// new TogglerClass({
+//   receptor: $('body'),
+//   btn: $('#main-nav-toggle-btn'),
+//   className: 'main-side-nav-opened'
+// });
 
 const links = document.querySelectorAll('.animated-anchor');
 new AnimatedAnchor(links, {

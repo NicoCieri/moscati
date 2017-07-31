@@ -1,5 +1,9 @@
 .contact {
   padding: 110px 0px 118px;
+  // Fixed background
+  background: url('../img/contact-bkg@2x.jpg') center no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
 
   h2 {
     font: 24px/26px $maven;
@@ -74,5 +78,25 @@
   .images {
     padding-top: 30px;
   }
-  
+
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 50px 30px;
+    background-size: cover;
+    background-attachment: scroll;
+
+    .form-wrapper {
+      padding: 0px 30px;
+    }
+
+    h2 {
+      margin: 20px auto;
+    }
+
+    .btn {
+      margin-top: 40px;
+    }
+  }
 }

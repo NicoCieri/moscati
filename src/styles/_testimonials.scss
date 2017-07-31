@@ -53,6 +53,12 @@
 
       &.author {
         color: $color-2;
+        font-style: italic;
+
+        a {
+          color: $color-2;
+          text-decoration: none;
+        }
       }
     }
   }
@@ -64,7 +70,7 @@
   }
   .testimony-carousel {
     padding: 40px 0px 0px;
-    
+
     .carousel-cell {
       padding: 10px 15px;
     }

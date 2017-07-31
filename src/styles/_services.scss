@@ -1,6 +1,7 @@
 .services {
   h2 {
-    margin-bottom: 22px;
+    margin-top: 80px;
+    margin-bottom: 13px;
     font: 50px/60px $cormorant;
     font-weight: 500;
     font-style: italic;
@@ -9,18 +10,23 @@
     color: $color-1;
     position: relative;
 
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
     &:before {
       content: '';
-      width: 198px;
-      height: 187px;
+      width: 119px;
+      height: 113px;
       display: block;
       position: absolute;
-      top: -35px;
+      top: -30px;
       left: 50%;
       @include transform(translate(-50%, 0));
-      background: url('../img/crew-title-bkg@2x.gif') center no-repeat;
+      background: url('../img/services-title-bkg@2x.gif') center no-repeat;
       background-size: contain;
-      opacity: .3;
+      z-index: 0;
     }
   }
 
@@ -67,7 +73,7 @@
 
 @media screen and (max-width: 767px) {
   .services {
-    padding: 20px 20px;
+    padding: 20px 0px;
 
     .item {
       padding: 20px 0px;

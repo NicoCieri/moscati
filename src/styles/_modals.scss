@@ -85,3 +85,23 @@
 
   &.in { opacity: .7; }
 }
+
+@media screen and (max-width: 768px) {
+  .modal-dialog {
+    top: 20px;
+    left: auto;
+    position: relative;
+    @include transform(none);
+
+    .modal-content {
+      max-height: 80vh;
+      overflow: scroll;
+    }
+
+    .modal-title-image {
+      margin-left: 0px;
+      margin-right: 0px;
+      top: 0px;
+    }
+  }
+}
