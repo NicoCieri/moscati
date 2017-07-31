@@ -65,7 +65,9 @@
       <div class="carousel-cell"><img src="https://placehold.it/1140x650" class="img-responsive"></div>
       <div class="carousel-cell"><img src="https://placehold.it/1140x650" class="img-responsive"></div>
       <!-- <a href="#" class="full-screen-btn">Fullscreen</a> -->
-      <a href="#nuestro-equipo" class="anchor animated-anchor"></a>
+      <a href="#nuestro-equipo" class="anchor animated-anchor">
+        <span class="icon-wrapper"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+      </a>
     </section>
 
     <section class="parallax crew" id="nuestro-equipo">
@@ -218,8 +220,8 @@
         </div>
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
-            <a href="!#" class="btn btn-default pull-left">SOCIALES</a>
-            <a href="!#" class="btn btn-primary pull-right">CORPORATIVOS</a>
+            <a href="!#" class="btn btn-default pull-left" data-toggle="modal" data-target="#eventos-sociales">SOCIALES</a>
+            <a href="!#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#eventos-corporativos">CORPORATIVOS</a>
           </div>
         </div>
 
@@ -239,9 +241,8 @@
                   <img src="https://placehold.it/180x180" alt="" class="active">
                   <img src="https://placehold.it/180x180" alt="">
                 </li>
-                <li class="pic">
-                  <img src="https://placehold.it/180x180" alt="" class="active">
-                  <img src="https://placehold.it/180x180" alt="">
+                <li class="pic pic-title">
+                  <span class="pic-title-content">15 AÑOS</span>
                 </li>
               </ul>
               <ul class="col-xs-12 col-sm-4 item">
@@ -249,27 +250,8 @@
                   <img src="https://placehold.it/180x180" alt="" class="active">
                   <img src="https://placehold.it/180x180" alt="">
                 </li>
-                <li class="pic">
-                  <img src="https://placehold.it/180x180" alt="" class="active">
-                  <img src="https://placehold.it/180x180" alt="">
-                </li>
-                <li class="pic">
-                  <img src="https://placehold.it/180x180" alt="" class="active">
-                  <img src="https://placehold.it/180x180" alt="">
-                </li>
-                <li class="pic">
-                  <img src="https://placehold.it/180x180" alt="" class="active">
-                  <img src="https://placehold.it/180x180" alt="">
-                </li>
-              </ul>
-              <ul class="col-xs-12 col-sm-4 item">
-                <li class="pic">
-                  <img src="https://placehold.it/180x180" alt="" class="active">
-                  <img src="https://placehold.it/180x180" alt="">
-                </li>
-                <li class="pic">
-                  <img src="https://placehold.it/180x180" alt="" class="active">
-                  <img src="https://placehold.it/180x180" alt="">
+                <li class="pic pic-title">
+                  <span class="pic-title-content">BODAS</span>
                 </li>
                 <li class="pic">
                   <img src="https://placehold.it/180x180" alt="" class="active">
@@ -289,9 +271,8 @@
                   <img src="https://placehold.it/180x180" alt="" class="active">
                   <img src="https://placehold.it/180x180" alt="">
                 </li>
-                <li class="pic">
-                  <img src="https://placehold.it/180x180" alt="" class="active">
-                  <img src="https://placehold.it/180x180" alt="">
+                <li class="pic pic-title small right">
+                  <span class="pic-title-content">cumpleaños</span>
                 </li>
                 <li class="pic">
                   <img src="https://placehold.it/180x180" alt="" class="active">
@@ -299,9 +280,8 @@
                 </li>
               </ul>
               <ul class="col-xs-12 col-sm-4 item">
-                <li class="pic">
-                  <img src="https://placehold.it/180x180" alt="" class="active">
-                  <img src="https://placehold.it/180x180" alt="">
+                <li class="pic pic-title small">
+                  <span class="pic-title-content">aniversarios</span>
                 </li>
                 <li class="pic">
                   <img src="https://placehold.it/180x180" alt="" class="active">
@@ -324,6 +304,22 @@
                 <li class="pic">
                   <img src="https://placehold.it/180x180" alt="" class="active">
                   <img src="https://placehold.it/180x180" alt="">
+                </li>
+                <li class="pic pic-title right">
+                  <span class="pic-title-content">bar/bat</span>
+                </li>
+                <li class="pic">
+                  <img src="https://placehold.it/180x180" alt="" class="active">
+                  <img src="https://placehold.it/180x180" alt="">
+                </li>
+              </ul>
+              <ul class="col-xs-12 col-sm-4 item">
+                <li class="pic">
+                  <img src="https://placehold.it/180x180" alt="" class="active">
+                  <img src="https://placehold.it/180x180" alt="">
+                </li>
+                <li class="pic pic-title small">
+                  <span class="pic-title-content">corporativos</span>
                 </li>
                 <li class="pic">
                   <img src="https://placehold.it/180x180" alt="" class="active">
@@ -462,13 +458,104 @@
 
   </div>
 
+  <div class="modal fade" id="eventos-sociales" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <button type="button" class="modal-close-btn" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title-image">
+            <img src="img/eventos-sociales.png" srcset="img/eventos-sociales@2x.png 2x" alt="Eventos Sociales" class="img-responsive">
+          </h2>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <ul class="modal-list">
+                  <li>15 años</li>
+                  <li>Cumpleaños</li>
+                  <li>Baby shower</li>
+                  <li>Comunión</li>
+                  <li>Bautismo</li>
+                  <li>Bodas</li>
+                  <li>Bodas igualitarias</li>
+                </ul>
+              </div>
+              <div class="col-sm-4">
+                <ul class="modal-list">
+                  <li>Civiles</li>
+                  <li>Ceremonias simbólicas</li>
+                  <li>Aniversarios</li>
+                  <li>Fiestas temáticas</li>
+                  <li>Bat Mitzvat</li>
+                  <li>Bar Mitzvat</li>
+                  <li>Graduaciones</li>
+                  <li>Fiestas de egresados</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="eventos-corporativos" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <button type="button" class="modal-close-btn" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title-image">
+            <img src="img/eventos-corporativos.png" srcset="img/eventos-corporativos@2x.png 2x" alt="Eventos Sociales" class="img-responsive">
+          </h2>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-5 col-sm-offset-1">
+                <ul class="modal-list">
+                  <li>Lanzamiento de productos</li>
+                  <li>Jornadas y reuniones de trabajo</li>
+                  <li>Fiestas de fin de año</li>
+                  <li>Workshop</li>
+                  <li>Seminarios, congresos y convenciones</li>
+                  <li>Almuerzos, cenas y cocktails</li>
+                  <li>Family day</li>
+                  <li>Viajes de incentivo</li>
+                  <li>Cursos de capacitación y coaching</li>
+                  <li>After office privados</li>
+                </ul>
+              </div>
+              <div class="col-sm-5">
+                <p>Nos encargamos de proveer y coordinar todos los rubros del evento</p>
+                <ul class="modal-list small">
+                  <li>Locaciones (salones, quintas, estancias)</li>
+                  <li>Catering y barras</li>
+                  <li>Sonido, iluminación y proyección</li>
+                  <li>Promotoras y recepcionistas</li>
+                  <li>Ambientación</li>
+                  <li>Shows</li>
+                  <li>Conducción</li>
+                  <li>Traslados</li>
+                  <li>Hotelería</li>
+                  <li>Regalos y merchandising</li>
+                  <li>Foto y video</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.1.0.js"
   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
   crossorigin="anonymous"></script>
   <!-- Bootstrap -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <!-- Font Awesome -->
   <script src="https://use.fontawesome.com/7dd7d1c763.js"></script>
   <!-- App -->

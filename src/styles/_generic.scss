@@ -61,6 +61,22 @@ body {
   }
 }
 
+%absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+%close-btn-x {
+  font-size: 24px;
+  color: $color-1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
 .header {
   width: 100%;
   padding: 16px 0px;
@@ -79,23 +95,16 @@ body {
     @include transition(all .3s);
 
     .close-btn {
-      font-size: 24px;
-      color: $color-1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      @extend %close-btn-x;
       @include transition(all .3s);
       @include transform(translate(-50%, -50%) scale(0));
     }
 
     .hamburguer-group {
+      @extend %absolute-center;
       width: 18px;
       height: 14px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
       @include transition(opacity .2s);
-      @include transform(translate(-50%, -50%));
       will-change: transform;
       animation: rotate 4s infinite;
     }
@@ -188,12 +197,7 @@ body {
       border-radius: 100%;
       position: relative;
 
-      i {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        @include transform(translate(-50%, -50%));
-      }
+      i { @extend %absolute-center; }
     }
   }
 

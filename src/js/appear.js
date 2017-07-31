@@ -17,9 +17,7 @@ class Appear {
   }
 
   updateTop() {
-    console.log('updateTop prev', this.state.offset_top)
     this.state.offset_top = this.elem.offset().top
-    console.log('updateTop after', this.state.offset_top)
   }
 
   checkAddClass() {

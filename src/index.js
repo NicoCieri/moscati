@@ -6,7 +6,10 @@ import Appear from './js/appear.js';
 import TogglerClass from './js/toggler-class.js';
 import AnimatedAnchor from './js/animated-anchor.js';
 
-new Carousel('.main-carousel');
+new Carousel('.main-carousel', {
+  prevNextButtons: false,
+  pageDots: true
+});
 
 $('.parallax').each((index, item) => {
   new Parallax(item)

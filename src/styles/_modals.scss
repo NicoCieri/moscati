@@ -1,0 +1,87 @@
+.modal-dialog {
+  width: calc(100% - 40px);
+  max-width: 1280px;
+  @extend %absolute-center;
+  @include transform(translate(-50%, -50%) !important);
+
+  .modal.in & {
+    @extend %absolute-center;
+  }
+
+
+  .modal-header {
+    position: relative;
+    border: none;
+  }
+
+  .modal-content {
+    background: $color-13;
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .modal-close-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 100%;
+    right: 0px;
+    left: auto;
+    margin-bottom: 10px;
+    background: $color-white;
+    border: 1px solid #9c7038;
+
+    i { @extend %close-btn-x; }
+
+  }
+
+  .modal-title-image {
+    // width: 100%;
+    display: block;
+    margin: 0px -25px;
+    position: relative;
+    top: -22px;
+    opacity: .5;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  p {
+    font: 15px/18px $cormorant;
+    letter-spacing: ls(5, 15px);
+    text-transform: uppercase;
+    color: $color-white;
+    padding-left: 20px;
+    margin: 12px 0px;
+  }
+
+  .modal-list {
+    padding-bottom: 20px;
+
+    li {
+      margin: 12px 0px;
+      font: 18px/22px $cormorant;
+      letter-spacing: ls(5, 18px);
+      text-transform: uppercase;
+      color: $color-white;
+    }
+
+    &.small {
+      li {
+        font: 15px/18px $cormorant;
+        letter-spacing: ls(5, 15px);
+      }
+    }
+  }
+
+}
+
+.modal-backdrop {
+  background: #FFF;
+
+  &.in { opacity: .7; }
+}

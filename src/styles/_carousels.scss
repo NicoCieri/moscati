@@ -5,12 +5,26 @@
   .anchor {
     width: 50px;
     height: 50px;
-    background: #9c7038;
+    color: $color-white;
+    background: $color-1;
     position: absolute;
     bottom: 0px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 1;
+
+    .icon-wrapper {
+      font-size: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%))
+
+      i {
+        -webkit-animation: arrow 1.5s 1.5s infinite;
+        animation: arrow 1.5s 1.5s infinite;
+      }
+    }
   }
 
   &.main-carousel {
@@ -20,6 +34,24 @@
 
       img {
         width: 100%;
+        max-height: 100vh;
+      }
+    }
+
+    .flickity-page-dots {
+      bottom: 58px;
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        margin: 0px 5px;
+        border: 1px solid $color-white;
+        background: transparent;
+        @include transition(all .3s);
+
+        &.is-selected {
+          border-color: $color-1;
+        }
       }
     }
   }
@@ -95,6 +127,22 @@
       display: none;
     }
   }
+}
+
+@-webkit-keyframes arrow {
+	0% { @include transform(translate(0px)); }
+	30% { @include transform(translate(0px, 5px)); }
+	60% { @include transform(translate(0px)); }
+  90% { @include transform(translate(0px)); }
+	100% { @include transform(translate(0px)); }
+}
+
+@keyframes arrow {
+	0% { @include transform(translate(0px)); }
+	30% { @include transform(translate(0px, 5px)); }
+	60% { @include transform(translate(0px)); }
+  90% { @include transform(translate(0px)); }
+	100% { @include transform(translate(0px)); }
 }
 
 @media screen and (max-width: 768px) {

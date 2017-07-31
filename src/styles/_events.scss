@@ -60,6 +60,31 @@
           @include transform(translate(-50%, -50%) scale(1));
         }
       }
+
+      &.pic-title {
+        font-size: 30px;
+        text-align: left;
+
+        &.small { font-size: 21px; }
+        &.right { text-align: right; }
+
+        .pic-title-content {
+          width: 100%;
+          padding: 0px 15px;
+          font-size: inherit;
+          font-family: $cormorant;
+          text-align: inherit;
+          color: $color-1;
+          text-transform: uppercase;
+          // overflow: hidden;
+          // text-overflow: ellipsis;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          @include transform(translateY(-50%));
+        }
+
+      }
     }
   }
 }
