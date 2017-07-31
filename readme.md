@@ -1,20 +1,24 @@
-# Simple Layout!
+# Moscati
 
 _______
-## How to start
+## Cómo empezar
 
+### Instalar modulos
 ```bash
 npm install
 ```
 
+### Iniciar servidor de desarrollo
 ```
 npm run start
 ```
 
-```
-npm run production
-```
-
+### Compilar archivos
 ```
 npm run build
+```
+
+### Compilar para producción
+```
+npm run production
 ```
