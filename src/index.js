@@ -6,6 +6,7 @@ import Appear from './js/appear';
 import TogglerClass from './js/toggler-class';
 import AnimatedAnchor from './js/animated-anchor';
 import MainNav from './js/main-nav';
+import Lightbox from './js/lightbox';
 
 new MainNav();
 
@@ -38,19 +39,27 @@ new AnimatedAnchor(links, {
   speed: 700
 });
 
-new Carousel('#testimony-carousel', {
-  groupCells: true,
-  wrapAround: false,
-  pageDots: false
-});
+// new Carousel('#testimony-carousel', {
+//   groupCells: true,
+//   wrapAround: false,
+//   pageDots: false
+// });
 
-new Carousel('#news-carousel', {
-  groupCells: true,
-  wrapAround: false,
-  pageDots: false,
-  draggable: false
-});
+// new Carousel('#news-carousel', {
+//   groupCells: true,
+//   wrapAround: false,
+//   pageDots: false,
+//   draggable: false
+// });
 
 $('.appear-on-scroll').each((index, item) => {
   new Appear(item)
 })
+
+new Lightbox('[data-fancybox]', {
+  toolbar : true,
+  buttons : [
+		'close'
+	],
+  animationEffect: 'fade'
+});

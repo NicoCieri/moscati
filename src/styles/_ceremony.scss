@@ -6,7 +6,7 @@
   position: relative;
   // Fixed background
   background: url('../img/ceremony-bkg@2x.jpg') center no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
 
   &:before {

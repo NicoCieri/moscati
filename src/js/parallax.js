@@ -30,8 +30,8 @@ class Parallax {
         let elemPosition = this.elem.getBoundingClientRect().top;
         let difference = window.innerHeight - elemPosition;
         if(difference >= 0) {
-          var bkgPosition = difference * 0.3;
-          this.bkg.style.transform = "translate3d(-50%, " + bkgPosition.toFixed(0) + "px, 0px)";
+          var bkgPosition = difference * 0.3 * (-1);
+          this.elem.style.backgroundPosition = "center " + bkgPosition.toFixed(0) + "px";
         }
       });
     }

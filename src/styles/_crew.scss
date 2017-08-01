@@ -4,9 +4,9 @@
   padding: 50px 20px;
   background: #a88454;
   // Add for parallax
-  // background: url('../img/crew-bkg@2x.jpg') center no-repeat;
-  // background-size: 100%;
-  // background-attachment: fixed;
+  background: url('../img/crew-bkg@2x.jpg') center no-repeat;
+  background-size: auto 120%;
+  background-attachment: fixed;
 
   h2 {
     margin-bottom: 22px;
@@ -146,5 +146,13 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .crew {
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center !important;
   }
 }

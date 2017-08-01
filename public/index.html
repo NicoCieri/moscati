@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Flickity -->
   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css">
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css"> <!-- webpack stylesheet output -->
 </head>
@@ -72,7 +74,7 @@
 
     <section class="parallax crew" id="nuestro-equipo">
       <!-- Remove for no parallax -->
-      <img src="img/crew-bkg.jpg" srcset="img/crew-bkg@2x.jpg 2x" alt="" class="bkg">
+      <!-- <img src="img/crew-bkg.jpg" srcset="img/crew-bkg@2x.jpg 2x" alt="" class="bkg"> -->
       <!-- End remove -->
       <div class="container">
         <div class="row">
@@ -115,7 +117,7 @@
       </div>
     </section>
 
-    <section class="testimonials" id="testimonios">
+    <!-- <section class="testimonials" id="testimonios">
       <div class="container">
         <h2>TESTIMONIOS</h2>
         <div class="row">
@@ -160,7 +162,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="services" id="servicios">
       <div class="container">
@@ -232,88 +234,154 @@
             <div class="events-pictures">
               <ul class="col-xs-12 col-sm-4 item">
                 <li class="pic">
-                  <img src="img/events/15-anios-1.jpg" srcset="img/events/15-anios-1.jpg 2x" alt="">
+                  <a href="img/events/15-anios-1@2x.jpg" data-fancybox="15-anios" data-caption="15 años">
+                    <img src="img/events/15-anios-1.jpg" srcset="img/events/15-anios-1.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic">
+                  <a href="img/events/15-anios-2@2x.jpg" data-fancybox="15-anios" data-caption="15 años">
+                    <img src="img/events/15-anios-2.jpg" srcset="img/events/15-anios-2.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
+                </li>
+                <!-- <li class="pic hide">
+                  <a href="img/events/15-anios-2@2x.jpg" data-fancybox="15-anios" data-caption="15 años">
                   <img src="img/events/15-anios-2.jpg" srcset="img/events/15-anios-2.jpg 2x" alt="">
-                </li>
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
+                </li> -->
                 <li class="pic">
-                  <img src="img/events/15-anios-3.jpg" srcset="img/events/15-anios-3.jpg 2x" alt="">
+                  <a href="img/events/15-anios-3@2x.jpg" data-fancybox="15-anios" data-caption="15 años">
+                    <img src="img/events/15-anios-3.jpg" srcset="img/events/15-anios-3.jpg 2x" alt=""  >
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic pic-title">
-                  <img src="img/events/15-anios-title@2x.jpg" alt="15 años">
+                  <span class="pic-title-content">15 años</span>
                 </li>
               </ul>
+
               <ul class="col-xs-12 col-sm-4 item">
                 <li class="pic">
-                  <img src="img/events/boda-1.jpg" srcset="img/events/boda-1.jpg 2x" alt="">
+                  <a href="img/events/boda-1@2x.jpg" data-fancybox="boda" data-caption="Bodas">
+                    <img src="img/events/boda-1.jpg" srcset="img/events/boda-1.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic pic-title">
-                  <img src="img/events/boda-title@2x.jpg" alt="Bodas">
+                  <span class="pic-title-content">Bodas</span>
                 </li>
                 <li class="pic">
-                  <img src="img/events/boda-2.jpg" srcset="img/events/boda-2.jpg 2x" alt="">
+                  <a href="img/events/boda-2@2x.jpg" data-fancybox="boda" data-caption="Bodas">
+                    <img src="img/events/boda-2.jpg" srcset="img/events/boda-2.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic">
-                  <img src="img/events/boda-3.jpg" srcset="img/events/boda-3.jpg 2x" alt="">
+                  <a href="img/events/boda-3@2x.jpg" data-fancybox="boda" data-caption="Bodas">
+                    <img src="img/events/boda-3.jpg" srcset="img/events/boda-3.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
               </ul>
+
               <ul class="col-xs-12 col-sm-4 item">
                 <li class="pic">
-                  <img src="img/events/cumpleanios-1.jpg" srcset="img/events/cumpleanios-1@2x.jpg 2x" alt="">
+                  <a href="img/events/cumpleanios-1@2x.jpg" data-fancybox="cumpleanios" data-caption="Cumpleaños">
+                    <img src="img/events/cumpleanios-1.jpg" srcset="img/events/cumpleanios-1@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic">
-                  <img src="img/events/cumpleanios-2.jpg" srcset="img/events/cumpleanios-2@2x.jpg 2x" alt="">
+                  <a href="img/events/cumpleanios-2@2x.jpg" data-fancybox="cumpleanios" data-caption="Cumpleaños">
+                    <img src="img/events/cumpleanios-2.jpg" srcset="img/events/cumpleanios-2@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic pic-title small right">
-                  <img src="img/events/cumpleanios-title@2x.jpg" alt="Cumpleaños">
+                  <span class="pic-title-content">Cumpleaños</span>
                 </li>
                 <li class="pic">
-                  <img src="img/events/cumpleanios-3.jpg" srcset="img/events/cumpleanios-3@2x.jpg 2x" alt="">
+                  <a href="img/events/cumpleanios-3@2x.jpg" data-fancybox="cumpleanios" data-caption="Cumpleaños">
+                    <img src="img/events/cumpleanios-3.jpg" srcset="img/events/cumpleanios-3@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
               </ul>
+
               <ul class="col-xs-12 col-sm-4 item">
                 <li class="pic pic-title small">
-                  <img src="img/events/aniversario-title@2x.jpg" alt="Aniversarios">
+                  <span class="pic-title-content">Aniversarios</span>
                 </li>
                 <li class="pic">
-                  <img src="img/events/aniversario-1.jpg" srcset="img/events/aniversario-1@2x.jpg 2x" alt="">
+                  <a href="img/events/aniversario-1@2x.jpg" data-fancybox="aniversario" data-caption="Aniversarios">
+                    <img src="img/events/aniversario-1.jpg" srcset="img/events/aniversario-1@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic">
-                  <img src="img/events/aniversario-2.jpg" srcset="img/events/aniversario-2@2x.jpg 2x" alt="">
+                  <a href="img/events/aniversario-2@2x.jpg" data-fancybox="aniversario" data-caption="Aniversarios">
+                    <img src="img/events/aniversario-2.jpg" srcset="img/events/aniversario-2@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic">
-                  <img src="img/events/aniversario-3.jpg" srcset="img/events/aniversario-3@2x.jpg 2x" alt="">
+                  <a href="img/events/aniversario-3@2x.jpg" data-fancybox="aniversario" data-caption="Aniversarios">
+                    <img src="img/events/aniversario-3.jpg" srcset="img/events/aniversario-3@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
               </ul>
+
               <ul class="col-xs-12 col-sm-4 item">
                 <li class="pic">
-                  <img src="img/events/bar-bat-1.jpg" srcset="img/events/bar-bat-1@2x.jpg 2x" alt="">
+                  <a href="img/events/bar-bat-1@2x.jpg" data-fancybox="bar-bat" data-caption="Bar/Bat">
+                    <img src="img/events/bar-bat-1.jpg" srcset="img/events/bar-bat-1@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic">
-                  <img src="img/events/bar-bat-2.jpg" srcset="img/events/bar-bat-2@2x.jpg 2x" alt="">
+                  <a href="img/events/bar-bat-2@2x.jpg" data-fancybox="bar-bat" data-caption="Bar/Bat">
+                    <img src="img/events/bar-bat-2.jpg" srcset="img/events/bar-bat-2@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic pic-title right">
-                  <img src="img/events/bar-bat-title@2x.jpg" alt="Bar/Bat">
+                  <span class="pic-title-content">Bar/Bat</span>
                 </li>
                 <li class="pic">
-                  <img src="img/events/bar-bat-3.jpg" srcset="img/events/bar-bat-3@2x.jpg 2x" alt="">
+                  <a href="img/events/bar-bat-3@2x.jpg" data-fancybox="bar-bat" data-caption="Bar/Bat">
+                    <img src="img/events/bar-bat-3.jpg" srcset="img/events/bar-bat-3@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
               </ul>
+
               <ul class="col-xs-12 col-sm-4 item">
                 <li class="pic">
-                  <img src="img/events/corporativo-1.jpg" srcset="img/events/corporativo-1@2x.jpg 2x" alt="">
+                  <a href="img/events/corporativo-1@2x.jpg" data-fancybox="corporativo" data-caption="Corporativo">
+                    <img src="img/events/corporativo-1.jpg" srcset="img/events/corporativo-1@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic pic-title small">
-                  <img src="img/events/corporativo-title@2x.jpg" alt="Corporativos">
+                  <span class="pic-title-content">Corporativos</span>
                 </li>
                 <li class="pic">
-                  <img src="img/events/corporativo-2.jpg" srcset="img/events/corporativo-2@2x.jpg 2x" alt="">
+                  <a href="img/events/corporativo-2@2x.jpg" data-fancybox="corporativo" data-caption="Corporativo">
+                    <img src="img/events/corporativo-2.jpg" srcset="img/events/corporativo-2@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
                 <li class="pic">
-                  <img src="img/events/corporativo-3.jpg" srcset="img/events/corporativo-3@2x.jpg 2x" alt="">
+                  <a href="img/events/corporativo-3@2x.jpg" data-fancybox="corporativo" data-caption="Corporativo">
+                    <img src="img/events/corporativo-3.jpg" srcset="img/events/corporativo-3@2x.jpg 2x" alt="">
+                    <span class="expand"><i class="fa fa-expand" aria-hidden="true"></i></span>
+                  </a>
                 </li>
               </ul>
+
             </div>
           </div>
         </div>
@@ -321,7 +389,7 @@
 
     </section>
 
-    <section class="news" id="prensa">
+    <!-- <section class="news" id="prensa">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
@@ -368,7 +436,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="contact" id="contacto">
       <!-- <img src="img/contact-bkg.jpg" srcset="img/contact-bkg@2x.jpg 2x" alt="" class="bkg"> -->
@@ -422,10 +490,10 @@
           <p>Seguinos en nuestras redes sociales y se parte de Silvia Moscati Event Planners. <br>Compartí con nosotras tus gustos, ideas y proyectos.</p>
           <div class="row">
             <div class="col-xs-3 col-sm-1 col-xs-offset-3 col-sm-offset-5">
-              <a href="#" class="social-media-btn facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+              <a href="https://facebook.com/silviamoscatieventplanner" target="_blank" class="social-media-btn facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
             </div>
             <div class="col-xs-3 col-sm-1">
-              <a href="#" class="social-media-btn instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://instagram.com/smeventplanner" target="_blank" class="social-media-btn instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>

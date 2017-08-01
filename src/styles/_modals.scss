@@ -86,6 +86,16 @@
   &.in { opacity: .7; }
 }
 
+
+.fancybox-bg {
+  background: $color-white;
+
+  .fancybox-is-open  & {
+    opacity: .7;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   .modal-dialog {
     top: 20px;

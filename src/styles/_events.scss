@@ -71,6 +71,16 @@
       position: relative;
       overflow: hidden;
 
+      &.hide {
+        display: none;
+      }
+
+      &:hover {
+        img {
+          @include transform(translate(-50%, -50%) scale(1));
+        }
+      }
+
       img {
         min-width: calc(100% + 2px);
         min-height: calc(100% + 2px);
@@ -87,9 +97,23 @@
           z-index: 1;
         }
 
-        &:hover {
-          @include transform(translate(-50%, -50%) scale(1));
-        }
+      }
+
+      .expand {
+        width: 35px;
+        height: 35px;
+        display: block;
+        background: rgba(255, 255, 255, .3);
+        z-index: 2;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        cursor: pointer;
+        font-size: 15px;
+        text-align: center;
+        line-height: 35px;
+        color: $color-white;
+
       }
 
       &.pic-title {
@@ -119,8 +143,9 @@
           text-align: inherit;
           color: $color-1;
           text-transform: uppercase;
-          // overflow: hidden;
-          // text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
           position: absolute;
           top: 50%;
           left: 0;
