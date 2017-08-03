@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -447,7 +447,7 @@
               <h2>Estás a una consulta de tu fiesta ideal.</h2>
               <div class="row no-padding">
                 <div class="col-sm-8 col-sm-offset-2">
-                  <form action="">
+                  <form id="contact" method="POST">
                     <div class="col-sm-10">
                       <div class="form-group">
                         <input type="email" name="email" class="form-control" placeholder="tu correo electrónico" required>
@@ -461,17 +461,16 @@
                           suscribirme a la lista de envíos
                         </label>
                       </div>
-
+                      <div id="resultado" class="list-inline col-md-12" style="display: inline-block; padding: 10px 20px"></div>
                     </div>
                     <div class="col-sm-2">
-                      <button type="submit" class="btn pull-right">Enviar</button>
+                      <input type="button" id="btn_enviar" onclick="enviar_datos_ajax();" class="btn pull-right" value="Enviar">
                     </div>
                   </form>
                   <div class="col-xs-12 images">
                     <img src="img/contact-img.jpg" srcset="img/contact-img@2x.jpg 2x" alt="" class="img-responsive">
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -603,6 +602,32 @@
   <script src="https://code.jquery.com/jquery-3.1.0.js"
   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
   crossorigin="anonymous"></script>
+
+  <!-- Send Contact -->
+  <script type="text/javascript">
+  function enviar_datos_ajax(){
+		jQuery(function($) {
+	    $.ajax({
+	      method:"POST",
+	      url: "send.php",
+	      data: $("#contact").serialize(),
+	      beforeSend: function () {
+	        //antes de enviar la petición al fichero PHP, mostramos mensaje
+	        jQuery("#btn_enviar").val("Procesando");
+	      },
+	      complete:function(datos){
+	        jQuery("#btn_enviar").val("Enviar");
+	      },
+	      success:function(datos){
+	        $("#resultado").html(datos);
+	      },
+	      error: function(datos){
+	        $("#resultado").html("<p>Error en el envio del formulario</p>");
+	      }
+	    });
+		});
+};
+</script>
   <!-- Bootstrap -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <!-- Font Awesome -->
