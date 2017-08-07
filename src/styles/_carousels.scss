@@ -35,6 +35,12 @@
       img {
         width: 100%;
         max-height: 100vh;
+        user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
       }
     }
 
@@ -82,6 +88,61 @@
       font-weight: 600;
       letter-spacing: ls(25, 36px);
       color: $color-1;
+    }
+
+    &.title {
+      margin-top: -70px;
+      top: 50%;
+      @include transform(translateY(-50%));
+      color: $color-1;
+
+      h2 {
+        font: 85px/60px $cormorant;
+        font-weight: 600;
+        font-style: italic;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: '';
+          width: 195px;
+          height: 188px;
+          display: block;
+          margin-left: 4px;
+          position: absolute;
+          top: -55px;
+          left: 50%;
+          @include transform(translate(-50%, 0));
+          background: url('../img/crew-title-bkg@2x.gif') center no-repeat;
+          background-size: contain;
+          opacity: .36;
+          z-index: -1;
+        }
+
+        span {
+          display: block;
+          font: 25px/25px $maven;
+          letter-spacing: ls(25, 25px);
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .description {
+    width: 100%;
+    padding: 18px 0px 78px;
+    text-align: center;
+    color: $color-white;
+    background: $color-13-transparent;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    p {
+      font: 30px/36px $cormorant;
+      font-style: italic;
+      letter-spacing: ls(25, 30px);
     }
   }
 
@@ -169,6 +230,27 @@
         h3 {
           font: 20px/22px $cormorant;
           margin-bottom: -14px;
+        }
+
+        &.title {
+          h2 {
+            font-size: 60px;
+            line-height: 50px;
+
+            span {
+              font-size: 20px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+
+      .description {
+        padding-bottom: 55px;
+
+        p {
+          font-size: 14px;
+          line-height: normal;
         }
       }
 
