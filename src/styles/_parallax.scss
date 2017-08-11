@@ -1,9 +1,9 @@
 .parallax {
   width: 100%;
   min-height: 500px;
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: top center;
+  // background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
 
@@ -13,12 +13,10 @@
   }
 
   .bkg {
-    width: 100%;
     min-width: 100%;
-    height: auto;
     min-height: 100%;
     position: absolute;
-    top: -50%;
+    bottom: 0;
     left: 50%;
     z-index: 0;
     opacity: 0;

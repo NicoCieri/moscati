@@ -24,14 +24,15 @@ class Parallax {
   }
 
   renderParallax() {
-    if(this.windowWidth > 767) {
+    if(this.windowWidth > 768) {
       window.requestAnimationFrame(() => {
         // let bodyScroll = document.body.getBoundingClientRect().top * (-1);
         let elemPosition = this.elem.getBoundingClientRect().top;
         let difference = window.innerHeight - elemPosition;
         if(difference >= 0) {
-          var bkgPosition = difference * 0.3 * (-1);
-          this.elem.style.backgroundPosition = "center " + bkgPosition.toFixed(0) + "px";
+          var bkgPosition = difference * 0.3;
+          this.bkg.style.transform = "translate3d(-50%, " + bkgPosition.toFixed(0) + "px, 0px)";
+          // this.elem.style.backgroundPosition = "center " + bkgPosition.toFixed(0) + "px";
         }
       });
     }
