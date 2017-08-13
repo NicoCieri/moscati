@@ -83,6 +83,13 @@
           color: #202020;
         }
       }
+
+      &.active {
+        &>a,
+        &>span {
+          font-weight: 600;
+        }
+      }
     }
 
     .prev, .next {
@@ -112,7 +119,7 @@
 @media screen and (max-width: 768px) {
   .press-list {
     padding: 15px 0px;
-    
+
     .press-item {
       padding: 0px 15px 15px;
 
