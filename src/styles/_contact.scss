@@ -15,9 +15,14 @@
     margin-bottom: 28px;
   }
 
-  .form-wrapper {
-    background: $color-2-transparent;
+  .images {
+    padding-top: 30px;
   }
+
+}
+
+.contact-form {
+  background: $color-2-transparent;
 
   .form-group {
     margin-bottom: 10px;
@@ -74,11 +79,6 @@
     border-radius: 0;
     background: transparent;
   }
-
-  .images {
-    padding-top: 30px;
-  }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -87,7 +87,7 @@
     background-size: cover;
     background-attachment: scroll;
 
-    .form-wrapper {
+    .contact-form {
       padding: 0px 30px;
     }
 
