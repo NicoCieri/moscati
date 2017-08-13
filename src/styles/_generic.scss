@@ -239,7 +239,7 @@ body {
   }
 
   .footer-first-row {
-    height: 362px;
+    min-height: 362px;
     background-image: url('../img/footer-generic-bkg@2x.png');
     background-size: cover;
     background-position: center;
@@ -307,7 +307,7 @@ body {
 
   .contact-form {
     background: none;
-    padding: 18px 0px 0px;
+    padding: 18px 0px 20px;
 
     h6 {
       font: 25px/25px $maven;
@@ -325,9 +325,38 @@ body {
       }
     }
 
+    label {
+      font-size: 8px;
+      margin-top: 30px;
+      margin-bottom: 2px;
+    }
+
+    .form-control {
+      font-size: 8px;
+    }
+
     textarea {
       height: 20px;
       margin-top: 20px;
+    }
+
+    .btn {
+      height: 64px;
+      margin: 15px 0px 0px;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      background: $color-13;
+      border: none;
+    }
+
+    .list-inline {
+      font-size: 12px;
+      font-family: $maven;
+
+       p {
+         margin: 0px;
+       }
     }
   }
 
@@ -373,8 +402,29 @@ body {
   }
 
   .footer {
-    padding: 40px 15px 10px;
+    &.home-footer {
+      padding: 40px 15px 10px;
+      background-image: url('../img/footer-bkg@2x.jpg');
+      background-color: #303030;
+      background-position: center;
+    }
+
+    .footer-first-row {
+      background: #000;
+    }
+
+    .footer-bkg-mobile {
+      background: url('../img/footer-bkg@2x.jpg') center no-repeat #303030;
+      background-size: cover;
+    }
+
+    .disclaimer {
+      padding: 20px 0px 10px;
+    }
   }
+
+
+
 
 
 }
