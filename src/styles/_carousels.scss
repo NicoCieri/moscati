@@ -189,6 +189,49 @@
       display: none;
     }
   }
+
+  &.press-carousel {
+    .content {
+      margin-top: 0px;
+
+      &.title {
+        h2 {
+          font-size: 153px;
+          letter-spacing: ls(5, 153px);
+          color: $color-2;
+
+          &:before {
+            content: '';
+            width: 357px;
+            height: 338px;
+            display: block;
+            position: absolute;
+            margin-top: 14px;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            background: url('../img/press-title-bkg@2x.png') center no-repeat;
+            background-size: contain;
+            opacity: 1;
+            z-index: -1;
+          }
+
+          &:after {
+            content: '';
+            width: 30px;
+            height: 3px;
+            margin-top: 182px;
+            display: block;
+            background: $color-2;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            @include transform(translateX(-50%));
+          }
+        }
+      }
+    }
+  }
 }
 
 @-webkit-keyframes arrow {
@@ -258,6 +301,17 @@
         bottom: 38px;
       }
 
+    }
+
+    &.press-carousel {
+      .content {
+        &.title {
+          h2 {
+            &:before { width: 200px; }
+            &:after { margin-top: 110px; }
+          }
+        }
+      }
     }
 
     .anchor {
