@@ -380,14 +380,11 @@
     &.social-carousel {
       .content {
         &.title {
-          &:before {
-            top: -90px
-          }
+          &:before { top: -90px }
 
           h2 {
-            &:after {
-              margin-top: 70px;
-            }
+            &:before { width: 230px; }
+            &:after { margin-top: 70px; }
           }
         }
       }

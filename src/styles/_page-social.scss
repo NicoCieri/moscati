@@ -134,10 +134,14 @@
   .section-facebook {
     padding: 40px 15px;
     .facebook-feed {
-      padding: 20px 15px 30px;
+      padding: 20px 15px 10px;
 
       .content {
-        padding: 15px 0px;
+        padding: 10px 0px;
+      }
+
+      figure {
+        margin-top: 10px;
       }
     }
   }
@@ -148,7 +152,7 @@
 
       .photos {
         padding: 10px 0px;
-        
+
         .item {
           padding: 5px 5px;
         }
