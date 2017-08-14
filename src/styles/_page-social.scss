@@ -4,7 +4,9 @@
   background-size: cover;
 
   .facebook-feed {
+    width: 100%;
     padding: 20px 30px 58px;
+    display: table;
     background: $color-1;
     color: $color-white;
 
@@ -15,6 +17,48 @@
       text-align: center;
       text-transform: uppercase;
       margin-top: 2px;
+    }
+
+    .author {
+      width: 100%;
+      float: left;
+      border-bottom: 2px solid $color-2;
+
+      img {
+        max-width: 32px;
+        float: left;
+        margin: 0px 7px 8px 0px;
+      }
+
+      .author-name {
+        margin: 3px 0px 6px;
+        font: 12px/7px $cormorant;
+        font-weight: 500;
+        font-style: italic;
+        letter-spacing: ls(50, 12px);
+        color: $color-white;
+      }
+
+      .when {
+        display: block;
+        font: 6px/7px sans-serif;
+        letter-spacing: ls(50, 6px);
+      }
+    }
+
+    .content {
+      padding-top: 35px;
+      padding-left: 15px;
+
+      p {
+        font: 9px/10px 'Arial', sans-serif;
+        font-style: italic;
+        margin: 0px;
+      }
+    }
+
+    figure {
+      margin-top: 28px;
     }
   }
 }
@@ -83,5 +127,33 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-facebook {
+    padding: 40px 15px;
+    .facebook-feed {
+      padding: 20px 15px 30px;
+
+      .content {
+        padding: 15px 0px;
+      }
+    }
+  }
+
+  .section-instagram {
+    .instagram-feed {
+      margin: 0px -5px;
+
+      .photos {
+        padding: 10px 0px;
+        
+        .item {
+          padding: 5px 5px;
+        }
+      }
+    }
+
   }
 }

@@ -25,7 +25,6 @@ export default class MainNav {
 	}
 
 	toggleNav(event) {
-    console.log('open menu')
 		if(event) {
       event.preventDefault();
       event.stopPropagation();
