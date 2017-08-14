@@ -10,6 +10,8 @@ class Carousel {
       imagesLoaded: true,
       cellAlign: 'center',
       wrapAround: true,
+      autoPlay: true,
+      autoPlay: 5000,
       ...settings
     });
     this.registerListeners();
