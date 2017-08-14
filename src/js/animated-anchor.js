@@ -18,12 +18,16 @@ class AnimatedAnchor {
   animate(event) {
     event.preventDefault();
     const target = $(event.currentTarget).attr("href");
-    const destination = $(target).offset().top;
-    this.body.animate({
-      scrollTop: destination
-    }, this.settings.speed, () => {
-        window.location.hash = target;
-    })
+    try {
+      var destination = $(target).offset().top;
+      this.body.animate({
+        scrollTop: destination
+      }, this.settings.speed, () => {
+          window.location.hash = target;
+      })
+    } catch(e) {
+      location.href = target;
+    }
   }
 
 }
