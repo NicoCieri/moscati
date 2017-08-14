@@ -232,6 +232,69 @@
       }
     }
   }
+
+  &.social-carousel {
+    .content {
+      margin-top: 40px;
+
+      &.title {
+        &:before {
+          content: '';
+          width: 30px;
+          height: 3px;
+          display: block;
+          background: $color-white;
+          position: absolute;
+          top: -154px;
+          left: 50%;
+          @include transform(translateX(-50%));
+        }
+
+        h2 {
+          font-size: 170px;
+          letter-spacing: ls(5, 170px);
+          color: $color-2-transparent;
+
+          span {
+            font-size: 50px;
+            line-height: 50px;
+            letter-spacing: ls(25, 50px);
+            text-transform: uppercase;
+            margin-top: 26px;
+          }
+
+          &:before {
+            content: '';
+            width: 395px;
+            height: 374px;
+            display: block;
+            position: absolute;
+            margin-top: 14px;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            background: url('../img/social-title-bkg@2x.png') center no-repeat;
+            background-size: contain;
+            opacity: 1;
+            z-index: -1;
+          }
+
+          &:after {
+            content: '';
+            width: 30px;
+            height: 3px;
+            margin-top: 130px;
+            display: block;
+            background: $color-2;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            @include transform(translateX(-50%));
+          }
+        }
+      }
+    }
+  }
 }
 
 @-webkit-keyframes arrow {
