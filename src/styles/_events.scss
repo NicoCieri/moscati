@@ -145,13 +145,29 @@
           text-transform: uppercase;
           white-space: nowrap;
           overflow: hidden;
-          text-overflow: ellipsis;
+          // text-overflow: ellipsis;
           position: absolute;
           top: 50%;
           left: 0;
           @include transform(translateY(-50%));
         }
 
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .events-pictures {
+    .item {
+      .pic{
+        &.pic-title{
+          font-size: 18px;
+
+          &.small {
+            font-size: 10px;
+          }
+        }
       }
     }
   }
@@ -179,5 +195,16 @@
     margin: 0 -7.5px;
     padding: 0px 0px;
 
+    .item {
+      .pic{
+        &.pic-title{
+          font-size: 26px;
+
+          &.small {
+            font-size: 16px;
+          }
+        }
+      }
+    }
   }
 }
