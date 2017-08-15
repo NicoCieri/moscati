@@ -12,14 +12,16 @@
   .modal-header {
     position: relative;
     border: none;
+    height: 0px;
   }
 
   .modal-content {
     background: $color-13;
-    overflow: hidden;
+    // overflow: hidden;
     border: none;
     border-radius: 0;
     box-shadow: none;
+    box-shadow: 6px 6px 13px rgba(0,0,0,.17);
   }
 
   .modal-close-btn {
@@ -35,6 +37,22 @@
 
     i { @extend %close-btn-x; }
 
+  }
+
+  .modal-title {
+    font: 100px/70px $cormorant;
+    font-style: italic;
+    letter-spacing: ls(12.5, 100px);
+    text-transform: uppercase;
+    color: $color-13;
+    text-shadow: 6px 0px 15px rgba(0,0,0,.17);
+    margin: 0px;
+    padding: 10px 0px;
+    display: inline-block;
+    position: relative;
+    left: -15px;
+    top: 0px;
+    @include transform(translateY(-100%));
   }
 
   .modal-title-image {
@@ -61,19 +79,30 @@
 
   .modal-list {
     padding-bottom: 20px;
+    list-style: none;
 
     li {
-      margin: 12px 0px;
-      font: 18px/22px $cormorant;
-      letter-spacing: ls(5, 18px);
+      margin: 24px 0px;
+      font: 21px/22px $cormorant;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: ls(5, 21px);
       text-transform: uppercase;
       color: $color-white;
+
+      i {
+        font-size: 11px;
+        margin: -5px 10px 0px 0px;
+      }
     }
 
     &.small {
+      list-style: initial;
+
       li {
-        font: 15px/18px $cormorant;
-        letter-spacing: ls(5, 15px);
+        font: 18px/21px $cormorant;
+        letter-spacing: ls(5, 18px);
+        margin: 2px 0px;
       }
     }
   }
@@ -81,9 +110,9 @@
 }
 
 .modal-backdrop {
-  background: #FFF;
+  background: #d9d9d9;
 
-  &.in { opacity: .7; }
+  &.in { opacity: .9; }
 }
 
 
@@ -102,16 +131,27 @@
     left: auto;
     position: relative;
     @include transform(none);
+    margin: 0px;
 
-    .modal-content {
-      max-height: 80vh;
+    .modal-body {
+      max-height: 70vh;
       overflow: scroll;
+    }
+
+    .modal-list {
+      padding: 0px 0px;
     }
 
     .modal-title-image {
       margin-left: 0px;
       margin-right: 0px;
       top: 0px;
+    }
+
+    .modal-title {
+      font-size: 20px;
+      line-height: 20px;
+      padding: 14px 0px;
     }
   }
 }
