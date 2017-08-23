@@ -17,7 +17,7 @@ new Carousel('.main-carousel', {
 
 $('.parallax').each((index, item) => {
   new Parallax(item)
-})
+});
 
 $('.thumbnail-item').each((index, item) => {
   const $item = $(item);
@@ -39,22 +39,22 @@ new AnimatedAnchor(links, {
   speed: 700
 });
 
-// new Carousel('#testimony-carousel', {
-//   groupCells: true,
-//   wrapAround: false,
-//   pageDots: false
-// });
+ new Carousel('#testimony-carousel', {
+   groupCells: true,
+   wrapAround: false,
+   pageDots: false
+ });
 
-// new Carousel('#news-carousel', {
-//   groupCells: true,
-//   wrapAround: false,
-//   pageDots: false,
-//   draggable: false
-// });
+ new Carousel('#news-carousel', {
+   groupCells: true,
+   wrapAround: false,
+   pageDots: false,
+   draggable: false
+ });
 
 $('.appear-on-scroll').each((index, item) => {
   new Appear(item)
-})
+});
 
 new Lightbox('[data-fancybox]', {
   toolbar : true,
