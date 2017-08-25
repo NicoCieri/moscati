@@ -5,9 +5,11 @@ import Parallax from './js/parallax';
 import Appear from './js/appear';
 import TogglerClass from './js/toggler-class';
 import AnimatedAnchor from './js/animated-anchor';
+import Header from './js/header';
 import MainNav from './js/main-nav';
 import Lightbox from './js/lightbox';
 
+new Header();
 new MainNav();
 
 new Carousel('.main-carousel', {

@@ -113,11 +113,20 @@ body {
 .header {
   width: 100%;
   padding: 16px 0px;
-  position: absolute;
+  position: fixed;
   top: 0px;
-  left: 0px;
-  z-index: 1;
+  right: 0px;
+  z-index: 3;
   overflow: hidden;
+  @include transition(all .4s);
+
+  &.scrolling {
+    background: rgba(255,255,255,.75);
+  }
+
+  .main-side-nav-opened & {
+    right: $sidenav-width-desktop;
+  }
 
   .hamburguer-button {
     width: 40px;
@@ -398,6 +407,9 @@ body {
   .header {
     .hamburguer-button {
       margin-right: 10px;
+    }
+    .main-side-nav-opened & {
+      right: $sidenav-width-mobile;
     }
   }
 
