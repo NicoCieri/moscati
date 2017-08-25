@@ -119,6 +119,7 @@ body {
   z-index: 3;
   overflow: hidden;
   @include transition(all .4s);
+  will-change: background, right;
 
   &.scrolling {
     background: rgba(255,255,255,.75);
@@ -410,6 +411,9 @@ body {
     }
     .main-side-nav-opened & {
       right: $sidenav-width-mobile;
+    }
+    .logo {
+      padding-left: 10px;
     }
   }
 

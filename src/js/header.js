@@ -20,7 +20,7 @@ export default class Header {
 	}
 
   checkScroll() {
-    return this.body.scrollTop() !== 0;
+    return document.body.getBoundingClientRect().top < 0;
   }
 
 	updateIsScrolling(event) {
