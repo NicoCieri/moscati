@@ -1,6 +1,6 @@
 # Moscati
 A responsive web page made with HTML5, CSS3 and plain JS ES6 with Webpack. It was made by Nicolás Cieri for OesteSi agency.
-Live site http://silviamoscati.com/
+Live site silviamoscati.com
 _______
 ## How to start
 
