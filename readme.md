@@ -1,24 +1,24 @@
 # Moscati
 
 _______
-## Cómo empezar
+## How to start
 
-### Instalar modulos
+### Install dependencies
 ```bash
 npm install
 ```
 
-### Iniciar servidor de desarrollo
+### Start development server
 ```
 npm run start
 ```
 
-### Compilar archivos
+### Build project
 ```
 npm run build
 ```
 
-### Compilar para producción
+### Build for production
 ```
 npm run production
 ```
